@@ -27,17 +27,7 @@ Please run these jupyter notebooks in order in order to generate the submission 
 
 submission file : final_submission.csv
 
-### Summarisation 
-
-Training in chunks of 512 tags helps keep the model small and realistically trainable, and allows for higher batch sizes.
-Used DICE loss commonly used in image segmentation tasks combined with usual cross-entropy, to achieve better F1 scores.
-Used multiple types of RNN cells - LSTMs and GRUs in same model, combined with MaxPooling and Attention both. ( See model summary in any of notebooks 6-11 ).
-Used Snapshot Ensembling with Cosine Schedule for resource-cheap ensembling.
-Due to high variance in CuDNN, test F1 may differ from run to run.
-More epochs/bigger models may lead to better scores but I didn't have resources to train them.
-All of the training was done on kaggle kernels, meaning each notebook had 9 hour time limit to run.
-Keeping all the punctuations for first 512 tags gave better score than the other way of removing some punctuations, so that was used there. 
-Total Train Time ( On TESLA K80 ) : ~55 Hours.
+[Solution overview](https://docs.google.com/document/d/1S8KLgwqj9AC2vAOYzwAGsx20_w9kCiaTVmGou2GW4yI/edit?usp=sharing)
 
 
 # Externel Resources/ Citation
